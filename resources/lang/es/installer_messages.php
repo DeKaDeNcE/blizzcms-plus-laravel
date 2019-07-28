@@ -7,7 +7,7 @@ return [
      * Traducciones compartidas.
      *
      */
-    'title' => 'Instalador de Laravel',
+    'title' => 'BlizzCMS Plus',
     'next' => 'Siguiente',
     'finish' => 'Instalar',
 
@@ -18,8 +18,8 @@ return [
      *
      */
     'welcome' => [
-        'title'   => 'Bienvenido al instalador',
-        'message' => 'Bienvenido al asistente de configuración',
+        'title'   => 'BlizzCMS Plus 0.1.6',
+        'message' => 'Siga los pasos para terminar de forma sastifactoría la instalación del CMS.',
     ],
 
 

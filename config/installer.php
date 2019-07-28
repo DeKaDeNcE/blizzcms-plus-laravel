@@ -15,7 +15,7 @@ return [
     |
     */
     'core' => [
-        'minPhpVersion' => '7.0.0'
+        'minPhpVersion' => '7.2.5'
     ],
     'final' => [
         'key' => true,
@@ -29,9 +29,13 @@ return [
             'tokenizer',
             'JSON',
             'cURL',
+            'mysqli',
+            'soap'
         ],
         'apache' => [
             'mod_rewrite',
+            'mod_headers',
+            'mod_expires'
         ],
     ],
 
@@ -108,7 +112,7 @@ return [
     'installed' => [
         'redirectOptions' => [
             'route' => [
-                'name' => 'welcome',
+                'name' => 'home',
                 'data' => [],
             ],
             'abort' => [
