@@ -1,10 +1,10 @@
 {
     "slug": "default",
-    "name": "Default",
-    "author": "John Doe",
-    "email": "johndoe@example.com",
-    "description": "This is an example theme.",
-    "web": "www.example.com",
+    "name": "BlizzCMS Default theme",
+    "author": "BlizzCMS Staff",
+    "email": "administrator@wow-cms.com",
+    "description": "This is a default theme for BlizzCMS.",
+    "web": "www.wow-cms.com",
     "license": "MIT",
     "version": "1.0"
 }

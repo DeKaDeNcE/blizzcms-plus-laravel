@@ -1,23 +1,62 @@
-<section class="uk-section uk-padding-remove slider-section">
-      <div class="uk-position-relative uk-visible-toggle" uk-slideshow="animation: fade;autoplay: true;autoplay-interval: 6000;min-height: 150;max-height: 300;">
-        <ul class="uk-slideshow-items">
-          <li>
-            <img src="https://noggaholic.de/application/themes/default/assets/images/slides/slide1.jpg" alt="test slider" uk-cover>
-            <div class="uk-container uk-position-relative uk-margin-large-top">
-              <h2 class="uk-h2 uk-position-medium uk-text-left uk-margin-remove">Test</h2>
-              <p class="uk-position-medium uk-text-left uk-margin-remove">Test Slider</p>
+<section class="uk-section uk-section-xsmall main-section" data-uk-height-viewport="expand: true">
+    <div class="uk-container">
+      <div class="uk-grid uk-grid-medium uk-margin-small" data-uk-grid>
+        <div class="uk-width-2-3@s">
+                      <h4 class="uk-h4 uk-text-bold"><i class="fas fa-newspaper fa-sm"></i> Latest News</h4>
+          <div class="uk-grid uk-grid-small uk-grid-match uk-child-width-1-1" data-uk-grid>
+                          <div>
+              <a href="https://noggaholic.de/news/1" title="Read More">
+                <div class="uk-card uk-card-default news-card uk-card-hover uk-grid-collapse uk-margin" uk-grid>
+                  <div class="uk-width-1-3@s uk-card-media-left uk-cover-container">
+                    <img src="https://noggaholic.de/assets/images/news/news.jpg" alt="Welcome to your new website!" uk-cover>
+                    <canvas width="500" height="250"></canvas>
+                  </div>
+                  <div class="uk-width-2-3@s uk-card-body">
+                    <h5 class="uk-h5 uk-text-bold uk-margin-small">Welcome to your new website!</h5>
+                    <p class="uk-text-small uk-margin-small">Your site has been installed successfully. to continue, sign in with your account and go to the administration panel to have access to all the features provided ...</p>
+                    <p class="uk-text-small uk-margin-remove uk-text-right"><i class="far fa-comment-alt"></i> 0 Comments</p>
+                  </div>
+                </div>
+              </a>
             </div>
-          </li>
-          <li>
-            <img src="https://noggaholic.de/application/themes/default/assets/images/slides/slide2.jpg" alt="test slider" uk-cover>
-            <div class="uk-container uk-position-relative uk-margin-large-top">
-              <h2 class="uk-h2 uk-position-medium uk-text-left uk-margin-remove">Test 2</h2>
-              <p class="uk-position-medium uk-text-left uk-margin-remove">Test Slider 2</p>
-            </div>
-          </li>
-        </ul>
-        <div class="uk-position-bottom-center uk-position-small">
-          <ul class="uk-slideshow-nav uk-dotnav"></ul>
         </div>
-      </div>
-    </section>
+    </div>
+    
+    <div class="uk-width-1-3@s">
+        <h4 class="uk-h4 uk-text-bold"><i class="fas fa-server fa-sm"></i> Server status</h4>
+        
+        <div class="uk-grid uk-grid-small uk-child-width-1-1 uk-margin-small" data-uk-grid>
+            <div>
+                <div class="uk-card uk-card-default uk-card-body card-status">
+                  <div class="uk-grid uk-grid-small" data-uk-grid>
+                    <div class="uk-width-expand">
+                      <h5 class="uk-h5 uk-text-bold uk-margin-small"><a href="" class="uk-link-reset"><i class="fas fa-server"></i> Reino name</a></h5>
+                    </div>
+                    <div class="uk-width-auto">
+                        <div class="status-dot online" uk-tooltip="En linea"><span><span></span></span></div>
+                    </div>
+                  </div>
+                  <div class="uk-grid uk-grid-collapse uk-margin-small" data-uk-grid>
+                    <div class="uk-width-1-2">
+                      <div class="uk-tile alliance-bar uk-text-center" uk-tooltip="Alianza">
+                        <i class="fas fa-users"></i>
+                        3
+                      </div>
+                    </div>
+                    <div class="uk-width-1-2">
+                      <div class="uk-tile horde-bar uk-text-center" uk-tooltip="Horda">
+                        <i class="fas fa-users"></i>
+                        3
+                      </div>
+                    </div>
+                  </div>
+                  <p class="uk-text-small uk-margin-small"><i class="fas fa-exclamation-circle"></i> Información del reino <span class="uk-text-danger uk-text-bold uk-text-uppercase">Desconectado</span></p>
+            </div>
+        </div>
+        <h5 class="uk-h5 uk-text-center uk-margin">
+            <i class="fas fa-gamepad"></i> Set Realmlist localhost                        
+        </h5>
+    </div>
+ </div>
+</div>
+</section>

@@ -1,1 +1,3 @@
+@sections('slide')
+
 @sections('main')
