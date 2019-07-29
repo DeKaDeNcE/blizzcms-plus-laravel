@@ -40,7 +40,7 @@ return array(
 		{
 			$asset->themePath()->add([
 										['style', 'css/style.css'],
-										['script', 'js/script.js']
+										['script', 'js/script.js'],
 									 ]);
 
 			// You may use elixir to concat styles and scripts.
