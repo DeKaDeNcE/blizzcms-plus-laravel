@@ -11,8 +11,12 @@
 |
 */
 
+
 Route::get('/', function () {
-	return Theme::view('index');
+    return redirect()->route('home');
 })->middleware('theme:default,layout');
 
+Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/blog', 'Web\PageController@blog')->name('blog');

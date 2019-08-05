@@ -2,23 +2,25 @@
     <div class="uk-container">
       <div class="uk-grid uk-grid-medium uk-margin-small" data-uk-grid>
         <div class="uk-width-2-3@s">
-                      <h4 class="uk-h4 uk-text-bold"><i class="fas fa-newspaper fa-sm"></i> Latest News</h4>
+          <h4 class="uk-h4 uk-text-bold"><i class="fas fa-newspaper fa-sm"></i> Latest News</h4>
           <div class="uk-grid uk-grid-small uk-grid-match uk-child-width-1-1" data-uk-grid>
-                          <div>
-              <a href="https://noggaholic.de/news/1" title="Read More">
-                <div class="uk-card uk-card-default news-card uk-card-hover uk-grid-collapse uk-margin" uk-grid>
-                  <div class="uk-width-1-3@s uk-card-media-left uk-cover-container">
-                    <img src="https://noggaholic.de/assets/images/news/news.jpg" alt="Welcome to your new website!" uk-cover>
-                    <canvas width="500" height="250"></canvas>
+            @foreach($blogs as $blog)
+              <div>
+                <a href="{{$blog->id}}" title="Read More">
+                  <div class="uk-card uk-card-default news-card uk-card-hover uk-grid-collapse uk-margin" uk-grid>
+                    <div class="uk-width-1-3@s uk-card-media-left uk-cover-container">
+                      <img src="https://noggaholic.de/assets/images/news/{{$blog->image}}" alt="Welcome to your new website!" uk-cover>
+                      <canvas width="500" height="250"></canvas>
+                    </div>
+                    <div class="uk-width-2-3@s uk-card-body">
+                      <h5 class="uk-h5 uk-text-bold uk-margin-small">{{$blog->title}}</h5>
+                      <p class="uk-text-small uk-margin-small">{{$blog->description}}</p>
+                      <p class="uk-text-small uk-margin-remove uk-text-right"><i class="far fa-comment-alt"></i> 0 Comments</p>
+                    </div>
                   </div>
-                  <div class="uk-width-2-3@s uk-card-body">
-                    <h5 class="uk-h5 uk-text-bold uk-margin-small">Welcome to your new website!</h5>
-                    <p class="uk-text-small uk-margin-small">Your site has been installed successfully. to continue, sign in with your account and go to the administration panel to have access to all the features provided ...</p>
-                    <p class="uk-text-small uk-margin-remove uk-text-right"><i class="far fa-comment-alt"></i> 0 Comments</p>
-                  </div>
-                </div>
-              </a>
-            </div>
+                </a>
+              </div>
+            @endforeach
         </div>
     </div>
     
