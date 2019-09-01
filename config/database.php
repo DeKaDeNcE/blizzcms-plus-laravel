@@ -63,6 +63,18 @@ return [
             ]) : [],
         ],
 
+        'auth' => [
+            'driver'     => 'mysql',
+            'host'       => env('AUTH_HOST', 'localhost'),
+            'database'   => env('AUTH_DATABASE', 'forge'),
+            'username'   => env('AUTH_USERNAME', 'forge'),
+            'password'   => env('AUTH_PASSWORD', ''),
+            'charset'    => 'utf8',
+            'collation'  => 'utf8_unicode_ci',
+            'prefix'     => '',
+            'strict'     => false,
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),

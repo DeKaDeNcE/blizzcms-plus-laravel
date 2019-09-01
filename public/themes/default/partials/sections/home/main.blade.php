@@ -28,11 +28,12 @@
         <h4 class="uk-h4 uk-text-bold"><i class="fas fa-server fa-sm"></i> Server status</h4>
         
         <div class="uk-grid uk-grid-small uk-child-width-1-1 uk-margin-small" data-uk-grid>
+            @foreach (Realm::getRealm() as $realms)
             <div>
                 <div class="uk-card uk-card-default uk-card-body card-status">
                   <div class="uk-grid uk-grid-small" data-uk-grid>
                     <div class="uk-width-expand">
-                      <h5 class="uk-h5 uk-text-bold uk-margin-small"><a href="" class="uk-link-reset"><i class="fas fa-server"></i> Reino name</a></h5>
+                      <h5 class="uk-h5 uk-text-bold uk-margin-small"><a href="" class="uk-link-reset"><i class="fas fa-server"></i> {{$realms->name}} </a></h5>
                     </div>
                     <div class="uk-width-auto">
                         <div class="status-dot online" uk-tooltip="En linea"><span><span></span></span></div>
@@ -53,7 +54,8 @@
                     </div>
                   </div>
                   <p class="uk-text-small uk-margin-small"><i class="fas fa-exclamation-circle"></i> Información del reino <span class="uk-text-danger uk-text-bold uk-text-uppercase">Desconectado</span></p>
-            </div>
+            </div>  
+            @endforeach
         </div>
         <h5 class="uk-h5 uk-text-center uk-margin">
             <i class="fas fa-gamepad"></i> Set Realmlist localhost                        

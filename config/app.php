@@ -162,6 +162,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Facuz\Theme\ThemeServiceProvider::class,
+        App\Providers\RealmServiceProvider::class,
         
 
         /*
@@ -229,6 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Theme' => Facuz\Theme\Facades\Theme::class,
+        'Realm' => App\Helpers\Realm\Realm::class,
     ],
 
 ];
