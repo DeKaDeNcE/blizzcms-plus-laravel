@@ -1,4 +1,4 @@
-image: registry.gitlab.com/wow-cms/blizzcms-plus-laravel:latest
+image: registry.gitlab.com/wow-cms/blizzcms-plus-laravel:master
 
 services:
   - mysql:5.7
