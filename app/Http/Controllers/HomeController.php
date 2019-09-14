@@ -36,7 +36,7 @@ class HomeController extends Controller
      * Show the online template.
      *
      * @return \Illuminate\Http\Response
-     */
+    */
     public function online()
     {
         return Theme::view('online'); // NOT IMPLEMENTED AT THE MOMENT

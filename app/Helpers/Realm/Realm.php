@@ -8,7 +8,42 @@ class Realm {
 
    public static function getRealm()
    {
-      return DB::connection('auth')->table('realmlist')->get();
+      return DB::table('realms')->get();
+   }
+
+   public static function getRealmHost($MultiRealm)
+   {
+      $host = DB::connection('auth')->table('realmlist')->where('id', $MultiRealm)->first();
+
+      return $host->address;
+   }
+
+   public static function getRealmPort($MultiRealm)
+   {
+        $port1 = DB::connection('auth')->table('realmlist')->where('id', $MultiRealm)->first();
+
+        return $port1->port;
+   }
+
+   public static function getRealmName($MultiRealm)
+   {
+      $name = DB::connection('auth')->table('realmlist')->where('id', $MultiRealm)->first();
+
+      return $name->name;
+   }
+
+   public static function getRealmStatus($MultiRealm)
+   {
+       $port = Realm::getRealmPort($MultiRealm);
+       $host = Realm::getRealmHost($MultiRealm);
+
+       error_reporting(0);
+       $etat = fsockopen($host,$port,$errno,$errstr,3);
+
+       if (!$etat)
+           return false;
+       else
+           return true;
    }
 
    public static function getFaction($race)
