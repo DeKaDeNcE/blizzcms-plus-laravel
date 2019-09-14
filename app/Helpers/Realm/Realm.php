@@ -92,13 +92,13 @@ class Realm {
        if ($copper == 0)
            $copper = 0;
 
-       $money = array(
+       $money2 = array(
            'gold' => $gold,
            'silver' => $silver,
            'copper' => $copper
        );
 
-       return $money;
+       return $money2;
    }
 
 
