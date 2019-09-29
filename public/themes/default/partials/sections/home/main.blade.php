@@ -6,7 +6,7 @@
           <div class="uk-grid uk-grid-small uk-grid-match uk-child-width-1-1" data-uk-grid>
             @foreach($blogs as $blog)
               <div>
-                <a href="{{$blog->id}}" title="Read More">
+                <a href="{{ url('blog/'.$blog->id )}} " title="Read More">
                   <div class="uk-card uk-card-default news-card uk-card-hover uk-grid-collapse uk-margin" uk-grid>
                     <div class="uk-width-1-3@s uk-card-media-left uk-cover-container">
                       <img src="{{ env('APP_URL')}}/themes/{{ config('theme.themeDefault') }}/assets/images/news/{{$blog->image}}" alt="Welcome to your new website!" uk-cover>

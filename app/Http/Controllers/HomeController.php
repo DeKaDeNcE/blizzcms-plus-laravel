@@ -31,11 +31,18 @@ class HomeController extends Controller
         ));
     }
 
-    public function blog($id){
-    	$posts = DB::table('news')->where('status', 'PUBLISHED')->where('id', $id)->get();
-    	return Theme::view('blog', array(
-            "article" => $posts
-        ));
+    public function blog($id = 0){
+        if($id == 0) {        
+            return redirect('');
+        } else {
+            $posts = DB::table('news')->where('id', $id)->get();
+            
+            if($posts->count() == 1) {
+                return Theme::view('blog', array(
+                    "article" => $posts
+                ));
+            } else { return redirect(''); }
+        }
     }
 
     /**
