@@ -9,10 +9,10 @@
     
         <title>@get('title')</title>
         
-        <link rel="stylesheet" href="assets/uikit/css/uikit.min.css" />
+        <link rel="stylesheet" href="{{ url('assets/uikit/css/uikit.min.css') }}" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
-        <script src="assets/uikit/js/uikit.min.js"></script>
-        <script src="assets/uikit/js/uikit-icons.min.js"></script>
+        <script src="{{ url('assets/uikit/js/uikit.min.js') }}"></script>
+        <script src="{{ url('assets/uikit/js/uikit-icons.min.js') }}"></script>
         @styles()
 
     </head>

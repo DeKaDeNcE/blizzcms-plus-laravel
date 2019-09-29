@@ -1,18 +1,18 @@
 <div class="uk-navbar-container uk-navbar-transparent">
-      <div class="uk-container">
-        <nav class="uk-navbar" uk-navbar>
-          <div class="uk-navbar-left">
-            <a href="{{ env('APP_URL') }}" class="uk-navbar-item uk-logo uk-margin-small-right">{{ env('APP_NAME') }}</a>
-          </div>
-          <div class="uk-navbar-right">
-            <ul class="uk-navbar-nav">
-                <li class="uk-visible@m"><a href="{{ env('APP_URL') }}/"><i class="fas fa-user-plus"></i>&nbsp;Register</a></li>
-                <li class="uk-visible@m"><a href="{{ env('APP_URL') }}/"><i class="fas fa-sign-in-alt"></i>&nbsp;Log In</a></li>
-            </ul>
-          </div>
-        </nav>
+  <div class="uk-container">
+    <nav class="uk-navbar" uk-navbar>
+      <div class="uk-navbar-left">
+        <a href="{{ env('APP_URL') }}" class="uk-navbar-item uk-logo uk-margin-small-right">{{ env('APP_NAME') }}</a>
       </div>
-    </div>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+          <li class="uk-visible@m"><a href="{{ env('APP_URL') }}/"><i class="fas fa-user-plus"></i>&nbsp;Register</a></li>
+          <li class="uk-visible@m"><a href="{{ env('APP_URL') }}/"><i class="fas fa-sign-in-alt"></i>&nbsp;Log In</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
     <div class="uk-navbar-container">
       <div class="uk-container">
         <nav class="uk-navbar" uk-navbar="mode: click">
@@ -63,4 +63,3 @@
         </nav>
         </div>
       </div>
-    </div>

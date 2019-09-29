@@ -31,7 +31,13 @@ class HomeController extends Controller
         ));
     }
 
-    
+    public function blog($id){
+    	$posts = DB::table('news')->where('status', 'PUBLISHED')->where('id', $id)->get();
+    	return Theme::view('blog', array(
+            "article" => $posts
+        ));
+    }
+
     /**
      * Show the online template.
      *
