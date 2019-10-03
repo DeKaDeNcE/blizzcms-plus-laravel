@@ -232,6 +232,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Theme' => Facuz\Theme\Facades\Theme::class,
         'Realm' => App\Helpers\Realm\Realm::class,
+        'Blog' => App\Models\Blog::class,
+        'Comments' => App\Models\Comments::class,
+        'Logs' => App\Models\Logs::class
     ],
 
 ];

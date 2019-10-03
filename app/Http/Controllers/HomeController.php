@@ -2,6 +2,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
+use Blog;
+use Comments;
 use App\Quotation;
 use Theme;
 
@@ -24,11 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $blog = DB::table('news')->get();
-
-        return Theme::view('home', array(
-            "blogs"  =>  $blog
-        ));
+        return Theme::view('home', 
+        [
+            'blogs' => Blog::select('*')->orderBy('id', 'desc')->get()
+        ]);
     }
 
     /**
@@ -37,18 +38,17 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function blog($id = 0){
-        if($id == 0) {        
+        
+        $count = Blog::select('*')->where('id', $id)->count();
+
+        if($id == 0 || $count == 0){ 
             return redirect('');
         } else {
-            $posts = DB::table('news')->where('id', $id)->get();
-            $posts_list = DB::table('news')->get();
-            
-            if($posts->count() == 1) {
-                return Theme::view('blog', array(
-                    "article" => $posts,
-                    "list_post" => $posts_list
-                ));
-            } else { return redirect(''); }
+            return Theme::view('blog', [
+                'article' => Blog::select('*')->where('id', $id)->get(),
+                'comments' => Comments::select('*')->where('id_news', $id)->get(),
+                'list_post' => Blog::select('*')->orderBy('id', 'desc')->limit('5')->get(),
+            ]);
         }
     }
 

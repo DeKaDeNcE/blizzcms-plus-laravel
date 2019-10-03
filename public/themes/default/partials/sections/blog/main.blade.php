@@ -25,6 +25,30 @@
           @endforeach
         </div>
         <div class="uk-grid uk-grid-small uk-child-width-1-1 uk-margin" data-uk-grid>
+          @foreach ($comments as $comments)
+          <div>
+            <div class="uk-card uk-card-default uk-card-body">
+              <div class="uk-grid uk-grid-small" data-uk-grid>
+                <div class="uk-width-1-6@s">
+                  <div class="Author uk-flex uk-flex-center">
+                    <div class="topic-author-avatar profile">
+                      <img src="" alt="" />
+                    </div>
+                  </div>
+                  <p class="uk-margin-remove uk-text-bold uk-text-center">
+                  {{ $comments->user_id }}
+                  </p>
+                </div>
+                <div class="uk-width-expand@s">
+                  <p class="uk-text-small uk-text-meta uk-margin-small">{{  $comments->created_at }}
+                  </p>
+                  {{ $comments->context }}
+                </div>
+              </div>
+            </div>
+            @endforeach
+          </div>
+
           <div>
             <div class="uk-card uk-card-default uk-card-body">
               <h3 class="uk-h3 uk-text-center"><span uk-icon="icon: comment; ratio: 1.5"></span> Unirse a la
@@ -45,11 +69,12 @@
           </div>
           <div class="uk-card-body">
             <ul class="uk-list uk-list-divider uk-text-small">
-            @foreach ($list_post as $posts )
+              @foreach ($list_post as $posts )
               <li>
-                <a href="http://blizzcms.test/blogs/"{{ $posts->id }}><i class="far fa-newspaper"></i> {{ $posts->title }}</a>
+                <a href="http://blizzcms.test/blogs/" {{ $posts->id }}><i class="far fa-newspaper"></i>
+                  {{ $posts->title }}</a>
               </li>
-            @endforeach
+              @endforeach
             </ul>
           </div>
         </div>
