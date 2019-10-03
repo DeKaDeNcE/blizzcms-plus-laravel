@@ -15,7 +15,7 @@
                     <div class="uk-width-2-3@s uk-card-body">
                       <h5 class="uk-h5 uk-text-bold uk-margin-small">{{$blog->title}}</h5>
                       <p class="uk-text-small uk-margin-small">{{$blog->description}}</p>
-                      <p class="uk-text-small uk-margin-remove uk-text-right"><i class="far fa-comment-alt"></i> 0 Comments</p>
+                      <p class="uk-text-small uk-margin-remove uk-text-right"><i class="far fa-comment-alt"></i> {{ Comments::getCountCommentsById($blog->id) }} Comments</p>
                     </div>
                   </div>
                 </a>

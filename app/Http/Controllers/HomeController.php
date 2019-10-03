@@ -28,7 +28,7 @@ class HomeController extends Controller
     {
         return Theme::view('home', 
         [
-            'blogs' => Blog::select('*')->orderBy('id', 'desc')->get()
+            'blogs' => Blog::getNews()
         ]);
     }
 
@@ -39,15 +39,13 @@ class HomeController extends Controller
      */
     public function blog($id = 0){
         
-        $count = Blog::select('*')->where('id', $id)->count();
+        $count = Blog::getCountNews($id);
 
         if($id == 0 || $count == 0){ 
             return redirect('');
         } else {
             return Theme::view('blog', [
-                'article' => Blog::select('*')->where('id', $id)->get(),
-                'comments' => Comments::select('*')->where('id_news', $id)->get(),
-                'list_post' => Blog::select('*')->orderBy('id', 'desc')->limit('5')->get(),
+                'idlink' => $id,
             ]);
         }
     }

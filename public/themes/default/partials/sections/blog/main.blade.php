@@ -5,7 +5,7 @@
   <div class="uk-container">
     <div class="uk-grid uk-grid-medium" data-uk-grid>
       <div class="uk-width-3-4@m">
-        @foreach ($article as $articles)
+        @foreach (Blog::getNewsByID($id) as $articles)
         <div class="uk-card uk-card-default uk-margin-small">
           <div class="uk-card-header">
             <div class="uk-grid uk-grid-small" data-uk-grid>
@@ -25,7 +25,7 @@
           @endforeach
         </div>
         <div class="uk-grid uk-grid-small uk-child-width-1-1 uk-margin" data-uk-grid>
-          @foreach ($comments as $comments)
+          @foreach (Comments::getCommentsByID($id) as $comments)
           <div>
             <div class="uk-card uk-card-default uk-card-body">
               <div class="uk-grid uk-grid-small" data-uk-grid>
@@ -69,7 +69,7 @@
           </div>
           <div class="uk-card-body">
             <ul class="uk-list uk-list-divider uk-text-small">
-              @foreach ($list_post as $posts )
+              @foreach (Blog::getFiveNews($id) as $posts )
               <li>
                 <a href="http://blizzcms.test/blogs/" {{ $posts->id }}><i class="far fa-newspaper"></i>
                   {{ $posts->title }}</a>
