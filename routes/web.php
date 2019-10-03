@@ -20,3 +20,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/blog/{post?}', 'HomeController@blog')->name('blog');
+
+Route::get('/updater', 'HomeController@update')->name('version');

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b8ed7fc4a2bdf2552aa419b876a79df5",
+    "content-hash": "6f9e55dd06d7976eb3e6dcec2305c814",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1176,6 +1176,58 @@
                 "random"
             ],
             "time": "2018-07-02T15:55:56+00:00"
+        },
+        {
+            "name": "pcinaglia/laraupdater",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pietrocinaglia/laraupdater.git",
+                "reference": "d19d88f0b1c1cbe7a2fdb5505d3d5f434939e8dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pietrocinaglia/laraupdater/zipball/d19d88f0b1c1cbe7a2fdb5505d3d5f434939e8dd",
+                "reference": "d19d88f0b1c1cbe7a2fdb5505d3d5f434939e8dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "pcinaglia\\laraupdater\\LaraUpdaterServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "pcinaglia\\laraupdater\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pietro Cinaglia",
+                    "homepage": "http://linkedin.com/in/pietrocinaglia",
+                    "role": "Developer; Software Engineer."
+                }
+            ],
+            "description": "LaraUpdater allows your Laravel Application to auto-update itself.",
+            "homepage": "https://github.com/pietrocinaglia/laraupdater",
+            "keywords": [
+                "backup-restore",
+                "laravel",
+                "self-updater",
+                "update-checker",
+                "update-installer"
+            ],
+            "time": "2018-12-03T12:08:48+00:00"
         },
         {
             "name": "phpoption/phpoption",

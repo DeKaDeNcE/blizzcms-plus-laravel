@@ -13,6 +13,7 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
+        "pcinaglia/laraupdater": "^1.0",
         "rachidlaasri/laravel-installer": "^4.0"
     },
     "require-dev": {

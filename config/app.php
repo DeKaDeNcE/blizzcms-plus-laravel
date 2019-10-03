@@ -163,6 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Facuz\Theme\ThemeServiceProvider::class,
         App\Providers\RealmServiceProvider::class,
+        pcinaglia\laraupdater\LaraUpdaterServiceProvider::class,
         
 
         /*

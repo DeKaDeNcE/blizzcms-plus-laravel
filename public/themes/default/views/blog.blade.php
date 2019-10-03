@@ -1,1 +1,4 @@
-@sections('blog/main', ['article' => $article])
+@sections('blog/main', array(
+                    "article" => $article,
+                    "list_post" => $list_post
+));
