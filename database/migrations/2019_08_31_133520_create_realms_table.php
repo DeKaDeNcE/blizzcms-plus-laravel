@@ -15,12 +15,13 @@ class CreateRealmsTable extends Migration
     {
         Schema::create('realms', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('realm_name');
             $table->string('hostname');
+            $table->string('port');
             $table->string('username');
             $table->string('password');
             $table->string('char_database');
-            $table->string('port');
-            $table->string('realmID');
+            $table->string('world_database');
             $table->string('console_hostname');
             $table->string('console_username');
             $table->string('console_password');

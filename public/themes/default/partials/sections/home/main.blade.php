@@ -20,7 +20,7 @@
                   </div>
                 </a>
               </div>
-            @endforeach
+            @endforeach 
         </div>
     </div>
     
@@ -28,15 +28,15 @@
         <h4 class="uk-h4 uk-text-bold"><i class="fas fa-server fa-sm"></i> Server status</h4>
         
         <div class="uk-grid uk-grid-small uk-child-width-1-1 uk-margin-small" data-uk-grid>
-            @foreach (Realm::getRealm() as $realms)
+            @foreach (Realm::getRealms() as $realms)
             <div>
                 <div class="uk-card uk-card-default uk-card-body card-status">
                   <div class="uk-grid uk-grid-small" data-uk-grid>
                     <div class="uk-width-expand">
-                      <h5 class="uk-h5 uk-text-bold uk-margin-small"><a href="" class="uk-link-reset"><i class="fas fa-server"></i> {{Realm::getRealmName($realms->realmID)}} </a></h5>
+                      <h5 class="uk-h5 uk-text-bold uk-margin-small"><a href="" class="uk-link-reset"><i class="fas fa-server"></i> {{$realms->realm_name }} </a></h5>
                     </div>
                     <div class="uk-width-auto">
-                        @if(Realm::getRealmStatus($realms->realmID) == true)
+                        @if(Realm::checkStatus($realms->realmID) == true)
                         <div class="status-dot online" uk-tooltip="En linea"><span><span></span></span></div>
                         @else
                         <div class="status-dot offline" uk-tooltip="Desconectado"><span><span></span></span></div>
@@ -57,7 +57,7 @@
                       </div>
                     </div>
                   </div>
-                  @if(Realm::getRealmStatus($realms->id) == true)                   
+                  @if(Realm::checkStatus($realms->id) == true)                   
                     <p class="uk-text-small uk-margin-small"><i class="fas fa-exclamation-circle"></i> Información del reino <span class="uk-text-sucess uk-text-bold uk-text-uppercase">En linea</span></p>
                   @else
                     <p class="uk-text-small uk-margin-small"><i class="fas fa-exclamation-circle"></i> Información del reino <span class="uk-text-danger uk-text-bold uk-text-uppercase">Desconectado</span></p>
@@ -65,7 +65,7 @@
             </div>  
         </div>
         <h5 class="uk-h5 uk-text-center uk-margin">
-            <i class="fas fa-gamepad"></i> Set Realmlist localhost                        
+            <i class="fas fa-gamepad"></i> Set Realmlist {{ $realms->hostname }}                      
         </h5>
         @endforeach
     </div>
