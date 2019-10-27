@@ -1,0 +1,10 @@
+{
+    "slug": "aquaflame",
+    "name": "AquaFlame.NET",
+    "author": "BlizzCMS Staff and AquaFlame.NET",
+    "email": "administrator@wow-cms.com",
+    "description": "AquaFlame Tribute is a new theme of BlizzCMS Laravel.",
+    "web": "www.wow-cms.com",
+    "license": "MIT",
+    "version": "1.0"
+}
