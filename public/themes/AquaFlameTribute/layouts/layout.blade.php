@@ -17,15 +17,12 @@
         <![endif]-->
    
         <!-- Le javascripts -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
         <script src="{{ url('assets/bootstrap/js/bootstrap.min.js') }}"></script>
         <script src="{{ url('themes/AquaFlameTribute/assets/js/global.js') }}"></script>
         <script src="{{ url('themes/AquaFlameTribute/assets/js/login.js') }}"></script>
         <script src="{{ url('themes/AquaFlameTribute/assets/js/register.js') }}"></script>
         <script src="{{ url('themes/AquaFlameTribute/assets/js/jquery.flexslider-min.js') }}"></script>
-        <script
-			  src="https://code.jquery.com/jquery-3.4.1.js"
-			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-			  crossorigin="anonymous"></script>
 </head>
     <body>
 
