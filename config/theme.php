@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'themeDefault' => env('APP_THEME', 'AquaFlameTribute'),
+	'themeDefault' => env('APP_THEME', 'Default'),
 
 	/*
 	|--------------------------------------------------------------------------

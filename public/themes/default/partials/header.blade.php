@@ -10,12 +10,10 @@
           <li class="uk-visible@m"><a href="{{ env('APP_URL') }}/register"><i class="fas fa-user-plus"></i>&nbsp;Register</a></li>
           <li class="uk-visible@m"><a href="{{ env('APP_URL') }}/login"><i class="fas fa-sign-in-alt"></i>&nbsp;Log In</a></li>
         @else
-
-        
           <li class="uk-visible@m">
                 <a href="#">
-                  <img class="uk-border-circle" src="{{ env('APP_URL') }}"" width="30" height="30" alt="Avatar">
-                  <span class="uk-text-middle uk-text-bold">&nbsp;Bienvenido, Usuario&nbsp;<i class="fas fa-caret-down"></i></span>
+                  <!-- <img class="uk-border-circle" src=""" width="30" height="30" alt="Avatar" /> -->
+                  <span class="uk-text-middle uk-text-bold">&nbsp;Bienvenido, {{ Auth::user()->name }}&nbsp;<i class="fas fa-caret-down"></i></span>
                 </a>
                 <div class="uk-navbar-dropdown" uk-dropdown="boundary: .uk-container">
                   <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -26,7 +24,6 @@
                      </ul>
                 </div>
           </li>
-
         @endguest
         </ul>
       </div>

@@ -33,7 +33,7 @@
                 <div class="uk-card uk-card-default uk-card-body card-status">
                   <div class="uk-grid uk-grid-small" data-uk-grid>
                     <div class="uk-width-expand">
-                      <h5 class="uk-h5 uk-text-bold uk-margin-small"><a href="" class="uk-link-reset"><i class="fas fa-server"></i> {{$realms->realm_name }} </a></h5>
+                      <h5 class="uk-h5 uk-text-bold uk-margin-small"><a href="/realm/{{$realms->id}}" class="uk-link-reset"><i class="fas fa-server"></i> {{$realms->realm_name }} </a></h5>
                     </div>
                     <div class="uk-width-auto">
                         @if(Realm::checkStatus($realms->realmID) == true)

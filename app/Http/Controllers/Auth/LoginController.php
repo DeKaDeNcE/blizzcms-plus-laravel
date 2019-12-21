@@ -2,8 +2,16 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+
+
+use Theme;
 
 class LoginController extends Controller
 {
@@ -37,8 +45,34 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    public function check_Login(Request $request)
+    {
+        $this->validate($request, [
+            'input-email' => 'required', 
+            'input-password' => 'required',
+        ]);
+
+        $user_data = array(
+            'email'  => $request->get('input-email'),
+            'password' => $request->get('input-password')
+        );
+
+        if(!Auth::attempt($user_data)){
+            return redirect('login');
+        }
+
+        if (Auth::check() ) {
+            return redirect('home');
+        }
+    }
+
     public function login()
     {
         return Theme::view('Login');
+    }
+
+    function logout(){
+        Auth::logout();
+        return redirect('home');
     }
 }

@@ -15,21 +15,6 @@ class Realm extends Model
         return Realm::select('*')->orderBy('id', 'desc')->get();
     }
 
-    public static function addRealm()
-    {
-
-    }
-
-    public static function obtainUsername()
-    {
-
-    }
-
-    public static function obtainPasswordEncrypted()
-    {
-
-    }
-
     public static function checkStatus($realmid)
     {
         $ip = Realm::select('hostname')->where('id', $realmid)->first();

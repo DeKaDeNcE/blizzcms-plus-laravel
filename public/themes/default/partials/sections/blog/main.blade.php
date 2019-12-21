@@ -49,6 +49,7 @@
             @endforeach
           </div>
 
+        @guest
           <div>
             <div class="uk-card uk-card-default uk-card-body">
               <h3 class="uk-h3 uk-text-center"><span uk-icon="icon: comment; ratio: 1.5"></span> Unirse a la
@@ -60,6 +61,7 @@
               </div>
             </div>
           </div>
+        @endguest
         </div>
       </div>
       <div class="uk-width-1-4@m">

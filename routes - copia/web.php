@@ -30,7 +30,3 @@ Route::post('login', 'Auth\LoginController@check_Login');
 
 Route::get('register', 'Auth\RegisterController@register')->name('register');
 Route::post('register', 'Auth\RegisterController@Create');
-
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});

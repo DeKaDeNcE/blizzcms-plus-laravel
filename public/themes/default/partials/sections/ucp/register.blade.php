@@ -12,7 +12,7 @@
           <div class="uk-form-controls">
             <div class="uk-inline uk-width-1-1">
               <span class="uk-form-icon"><i class="fas fa-user fa-lg"></i></span>
-              <input id="name" type="text" class="uk-input @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+              <input id="name" type="text" class="uk-input @error('name') is-invalid @enderror" name="input-name" id="input-name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                 @error('name')
                     <div class="uk-alert-warning" uk-alert>
                         <a class="uk-alert-close" uk-close></a>
@@ -26,7 +26,7 @@
           <div class="uk-form-controls">
             <div class="uk-inline uk-width-1-1">
               <span class="uk-form-icon"><i class="fas fa-envelope fa-lg"></i></span>
-              <input class="uk-input @error('email') is-invalid @enderror" type="email" id="email" placeholder="Write your e-mail" required>
+              <input class="uk-input @error('email') is-invalid @enderror" type="email" name="input-email" id="input-email" placeholder="Write your e-mail" required>
                 @error('email')
                     <div class="uk-alert-warning" uk-alert>
                         <a class="uk-alert-close" uk-close></a>
@@ -40,7 +40,7 @@
           <div class="uk-form-controls">
             <div class="uk-inline uk-width-1-1">
               <span class="uk-form-icon"><i class="fas fa-unlock-alt fa-lg"></i></span>
-              <input class="uk-input @error('password') is-invalid @enderror" type="password" id="password" pattern=".{5,16}" title="5 characters minimum and maximum 16" placeholder="Write your password" name="password" required autocomplete="new-password">
+              <input class="uk-input @error('password') is-invalid @enderror" type="password" name="input-password" id="input-password" pattern=".{5,16}" title="5 characters minimum and maximum 16" placeholder="Write your password" name="password" required autocomplete="new-password">
                 @error('password')
                     <div class="uk-alert-warning" uk-alert>
                         <a class="uk-alert-close" uk-close></a>
