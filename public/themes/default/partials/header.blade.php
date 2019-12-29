@@ -17,7 +17,7 @@
                 </a>
                 <div class="uk-navbar-dropdown" uk-dropdown="boundary: .uk-container">
                   <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li><a href="{{ env('APP_URL') }}"><i class="far fa-user-circle"></i> Configuracion</a></li>
+                    <li><a href="{{ env('APP_URL') }}/ucp/settings"><i class="far fa-user-circle"></i> Configuracion</a></li>
                     <li><a href="{{ env('APP_URL') }}"><i class="far fa-user-circle"></i> Cuentas de Juego</a></li>
                     <li><a href="{{ env('APP_URL') }}"><i class="far fa-user-circle"></i> Vincular nueva cuenta</a></li>
                     <li><a href="{{ env('APP_URL') }}"><i class="fas fa-sign-out-alt"></i> Salir</a></li>

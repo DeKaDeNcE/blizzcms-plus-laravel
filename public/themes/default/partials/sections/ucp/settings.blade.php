@@ -2,7 +2,7 @@
       <div class="uk-background-cover uk-height-small header-section"></div>
     </section>
 
-    {{ Emulators_TC::Hello()}}
+    {{ TrinityCore::Hello()}}
 
     <section class="uk-section uk-section-xsmall main-section" data-uk-height-viewport="expand: true">
       <div class="uk-container">

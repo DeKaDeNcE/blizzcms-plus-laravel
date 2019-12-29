@@ -41,18 +41,19 @@ class BGameAccount {
     public static function getEmulator($expansion)
     {
         $dbEmulator = DB::connection('website')->table('realms')->where('id_expansion', $expansion)->first();
-
+        /*
         switch($dbEmulator->emulator)
         {
             case 'Mangos':
-                Emulators::Mangos($expansion, $dbEmulator->emulator);
+                // MancosCore::getMangos($expansion, $dbEmulator->emulator);
             break;
 
 
             case 'Trinity'
-                Emulators::Trinity($expansion, $dbEmulator->emulator);
+                // TrinityCore::getTrinity($expansion, $dbEmulator->emulator);
             break;
         }
+        */
     }
 }
 

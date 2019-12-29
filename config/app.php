@@ -179,6 +179,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         RachidLaasri\LaravelInstaller\Providers\LaravelInstallerServiceProvider::class,
+        App\Providers\BGameAccountServiceProvider::class,
+        App\Providers\TrinityCoreServiceProvider::class,
+        App\Providers\MangoServiceProvider::class,
 
     ],
 
@@ -234,7 +237,16 @@ return [
         'Realm' => App\Models\Realm::class,
         'Blog' => App\Models\Blog::class,
         'Comments' => App\Models\Comments::class,
-        'Logs' => App\Models\Logs::class
+        'Logs' => App\Models\Logs::class,
+
+        /*
+         * 
+         * BGameAccount System
+         * 
+        */
+        'BGameAccount' => App\Helpers\BGameAccount\BGameAccount::class,
+        'TrinityCore' => App\Helpers\TrinityCore\TrinityCore::class,
+        'MangosCore' => App\Helpers\Mangos\Mangos::class,
     ],
 
 ];

@@ -1,12 +1,12 @@
 <?php 
 
-namespace App\Helpers\Emulators\TC;
- 
+namespace App\Helpers\Emulators;
+
 use Illuminate\Support\Facades\DB;
 
 class TrinityCore {
 
-    function hello() {
+    public function hello() {
         echo 'Esto es prueba';
     }
 
