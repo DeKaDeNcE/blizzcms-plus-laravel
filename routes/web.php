@@ -2,6 +2,20 @@
 
 /*
 |--------------------------------------------------------------------------
+| Internal Routes
+|--------------------------------------------------------------------------
+|
+*/
+
+Route::get('/', function () {
+    return redirect(app()->getLocale());
+})->middleware('theme:default,layout');
+
+
+Route::get('/updater', 'HomeController@update')->name('version');
+
+/*
+|--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 |
@@ -11,14 +25,31 @@
 |
 */
 
+Route::group([
+    'prefix' => '{locale}', 
+    'where' => ['locale' => '[a-zA-Z]{2}'], 
+    'middleware' => 'setlocale'], function() {
 
-Route::get('/', function () {
-    return redirect()->route('home');
-})->middleware('theme:default,layout');
+        
+    Route::get('/', 'HomeController@index');
 
-Auth::routes();
+    Route::get('/home', 'HomeController@index')->name('home');
+    
+    Route::get('/blog/{post?}', 'HomeController@blog')->name('blog');
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/blog/{post?}', 'HomeController@blog')->name('blog');
+    Route::get('/ucp/settings', 'UserController@settings')->name('ucp/settings');
 
-Route::get('/updater', 'HomeController@update')->name('version');
+    Route::get('login', 'Auth\LoginController@login')->name('login');
+    Route::post('login', 'Auth\LoginController@check_Login');
+
+    Route::get('register', 'Auth\RegisterController@register')->name('register');
+    Route::post('register', 'Auth\RegisterController@Create');
+});
+
+
+
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

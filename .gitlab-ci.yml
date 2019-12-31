@@ -1,40 +1,18 @@
-image: registry.gitlab.com/wow-cms/blizzcms-plus-laravel
-
-services:
-  - mysql:5.7
-
 variables:
+  MYSQL_ROOT_PASSWORD: root
+  MYSQL_USER: homestead
+  MYSQL_PASSWORD: secret
   MYSQL_DATABASE: homestead
-  MYSQL_ROOT_PASSWORD: secret
   DB_HOST: mysql
-  DB_USERNAME: root
 
-stages:
-  - test
-  - deploy
-
-unit_test:
+test:
   stage: test
+  services:
+    - mysql:5.7
+  image: edbizarro/gitlab-ci-pipeline-php:7.3-alpine
   script:
+    - composer install --prefer-dist --no-ansi --no-interaction --no-progress
     - cp .env.example .env
-    - composer install
     - php artisan key:generate
     - php artisan migrate
-    - vendor/bin/phpunit
-
-deploy_production:
-  stage: deploy
-  script:
-    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-    - eval $(ssh-agent -s)
-    - ssh-add <(echo "$SSH_PRIVATE_KEY")
-    - mkdir -p ~/.ssh
-    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-
-    - ~/.composer/vendor/bin/envoy run deploy --commit="$CI_COMMIT_SHA"
-  environment:
-    name: production
-    url: http://192.168.1.1
-  when: manual
-  only:
-    - master
+    - php vendor/bin/phpunit --coverage-text --colors

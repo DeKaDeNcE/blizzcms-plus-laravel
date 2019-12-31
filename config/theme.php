@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'themeDefault' => env('APP_THEME', 'default'),
+	'themeDefault' => env('APP_THEME', 'Default'),
 
 	/*
 	|--------------------------------------------------------------------------

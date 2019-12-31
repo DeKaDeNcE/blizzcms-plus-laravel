@@ -6,46 +6,6 @@ use Illuminate\Support\Facades\DB;
 
 class Realm {
 
-   public static function getRealm()
-   {
-      return DB::table('realms')->get();
-   }
-
-   public static function getRealmHost($MultiRealm)
-   {
-      $host = DB::connection('auth')->table('realmlist')->where('id', $MultiRealm)->first();
-
-      return $host->address;
-   }
-
-   public static function getRealmPort($MultiRealm)
-   {
-        $port1 = DB::connection('auth')->table('realmlist')->where('id', $MultiRealm)->first();
-
-        return $port1->port;
-   }
-
-   public static function getRealmName($MultiRealm)
-   {
-      $name = DB::connection('auth')->table('realmlist')->where('id', $MultiRealm)->first();
-
-      return $name->name;
-   }
-
-   public static function getRealmStatus($MultiRealm)
-   {
-       $port = Realm::getRealmPort($MultiRealm);
-       $host = Realm::getRealmHost($MultiRealm);
-
-       error_reporting(0);
-       $etat = fsockopen($host,$port,$errno,$errstr,3);
-
-       if (!$etat)
-           return false;
-       else
-           return true;
-   }
-
    public function getCharactersOnlineAlliance($multiRealm)
    {
        $races = array('1','3','4','7','11','22','25');
@@ -122,7 +82,6 @@ class Realm {
            'silver' => $silver,
            'copper' => $copper
        );
-
        return $money2;
    }
 

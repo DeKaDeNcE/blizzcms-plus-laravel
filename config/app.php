@@ -93,7 +93,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -161,7 +161,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Facuz\Theme\ThemeServiceProvider::class,
+        Sayghteight\Theme\ThemeServiceProvider::class,
         App\Providers\RealmServiceProvider::class,
         pcinaglia\laraupdater\LaraUpdaterServiceProvider::class,
         
@@ -179,6 +179,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         RachidLaasri\LaravelInstaller\Providers\LaravelInstallerServiceProvider::class,
+        App\Providers\BGameAccountServiceProvider::class,
+        App\Providers\TrinityCoreServiceProvider::class,
+        App\Providers\MangoServiceProvider::class,
 
     ],
 
@@ -230,11 +233,20 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Theme' => Facuz\Theme\Facades\Theme::class,
-        'Realm' => App\Helpers\Realm\Realm::class,
+        'Theme' => Sayghteight\Theme\Facades\Theme::class,
+        'Realm' => App\Models\Realm::class,
         'Blog' => App\Models\Blog::class,
         'Comments' => App\Models\Comments::class,
-        'Logs' => App\Models\Logs::class
+        'Logs' => App\Models\Logs::class,
+
+        /*
+         * 
+         * BGameAccount System
+         * 
+        */
+        'BGameAccount' => App\Helpers\BGameAccount\BGameAccount::class,
+        'TrinityCore' => App\Helpers\TrinityCore\TrinityCore::class,
+        'MangosCore' => App\Helpers\Mangos\Mangos::class,
     ],
 
 ];

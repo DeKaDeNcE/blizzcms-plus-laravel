@@ -30,10 +30,17 @@ class Blog extends Model
         return Blog::select('*')->where('id', $id)->count();
     }
 
-    public function comments()
+
+    /* Administrator Level */
+
+    public static function insertNew()
     {
-          return $this->hasMany(NewsComments::class, 'newsId');
+
     }
 
+    public static function updateNew()
+    {
+
+    }
 
 }
