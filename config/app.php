@@ -93,7 +93,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -161,7 +161,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Facuz\Theme\ThemeServiceProvider::class,
+        Sayghteight\Theme\ThemeServiceProvider::class,
         App\Providers\RealmServiceProvider::class,
         pcinaglia\laraupdater\LaraUpdaterServiceProvider::class,
         
@@ -233,7 +233,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Theme' => Facuz\Theme\Facades\Theme::class,
+        'Theme' => Sayghteight\Theme\Facades\Theme::class,
         'Realm' => App\Models\Realm::class,
         'Blog' => App\Models\Blog::class,
         'Comments' => App\Models\Comments::class,
