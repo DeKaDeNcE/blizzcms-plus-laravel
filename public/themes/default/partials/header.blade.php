@@ -7,7 +7,7 @@
       <div class="uk-navbar-right">
         <ul class="uk-navbar-nav">
         @guest
-          <li class="uk-visible@m"><a href="{{ env('APP_URL') }}/register"><i class="fas fa-user-plus"></i>&nbsp;@lang('menu.Register')</a></li>
+          <li class="uk-visible@m"><a href="{{ route('register', app()->getLocale()) }}"><i class="fas fa-user-plus"></i>&nbsp;@lang('menu.Register')</a></li>
           <li class="uk-visible@m"><a href="{{ env('APP_URL') }}/login"><i class="fas fa-sign-in-alt"></i>&nbsp;@lang('menu.Login')</a></li>
         @else
           <li class="uk-visible@m">

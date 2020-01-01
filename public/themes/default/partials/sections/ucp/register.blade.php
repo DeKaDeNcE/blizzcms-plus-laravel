@@ -5,7 +5,7 @@
 <section class="uk-section uk-section-xsmall main-section" data-uk-height-viewport="expand: true">
     <div class="uk-container">
         <h4 class="uk-h4 uk-heading-line uk-text-uppercase uk-text-bold uk-margin-small-bottom"><span><i class="fas fa-user-plus"></i> {{ __('Register') }}</span></h4>
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('register', app()->getLocale()) }}">
         @csrf
         <div class="uk-margin uk-light">
           <label class="uk-form-label">Register your Account in our server</label>
