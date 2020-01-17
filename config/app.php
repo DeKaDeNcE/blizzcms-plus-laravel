@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'locale' => 'es',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'es',
+    'fallback_locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -181,7 +181,7 @@ return [
         RachidLaasri\LaravelInstaller\Providers\LaravelInstallerServiceProvider::class,
         App\Providers\BGameAccountServiceProvider::class,
         App\Providers\TrinityCoreServiceProvider::class,
-        App\Providers\MangoServiceProvider::class,
+        App\Providers\MangosCoreServiceProvider::class,
 
     ],
 
@@ -245,8 +245,8 @@ return [
          * 
         */
         'BGameAccount' => App\Helpers\BGameAccount\BGameAccount::class,
-        'TrinityCore' => App\Helpers\TrinityCore\TrinityCore::class,
-        'MangosCore' => App\Helpers\Mangos\Mangos::class,
+        'TrinityCore' => App\Helpers\Emulators\TrinityCore::class,
+        'MangosCore' => App\Helpers\Emulators\MangosCore::class,
     ],
 
 ];

@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class MangoServiceProvider extends ServiceProvider
+class MangosCoreServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -13,7 +13,7 @@ class MangoServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        require_once app_path() . '/Helpers/Emulators/Mangos.php';
+        require_once app_path() . '/Helpers/Emulators/MangosCore.php';
     }
 
     /**

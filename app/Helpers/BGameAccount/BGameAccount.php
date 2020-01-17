@@ -4,9 +4,8 @@ namespace App\Helpers\BGameAccount;
  
 use Illuminate\Support\Facades\DB;
 
-class BGameAccount {
-
-    
+class BGameAccount
+{
     public static function getExpansionACCs($expansion)
     {
         switch($expansion)

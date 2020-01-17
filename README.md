@@ -6,7 +6,7 @@
 
 | Requirements | Description |
 | :----------- | :---------- |
-| **PHP Version** | **7.2.5 or newer** is recommended |
+| **PHP Version** | **7.2 or newer** is recommended |
 | **Apache Modules** | mod_headers - mod_rewrite - mod_expires |
 | **PHP Extensions** | curl - json - mbstring - mysqli - openssl - pdo - soap - tokenizer |
 

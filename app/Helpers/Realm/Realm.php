@@ -4,8 +4,8 @@ namespace App\Helpers\Realm;
  
 use Illuminate\Support\Facades\DB;
 
-class Realm {
-
+class Realm
+{
    public function getCharactersOnlineAlliance($multiRealm)
    {
        $races = array('1','3','4','7','11','22','25');

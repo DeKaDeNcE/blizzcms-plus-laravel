@@ -11,7 +11,6 @@
 |
 */
 
-
 Route::get('/', function () {
     return redirect(app()->getLocale());
 })->middleware('theme:default,layout');
@@ -24,20 +23,18 @@ Route::group([
     'where' => ['locale' => '[a-zA-Z]{2}'], 
     'middleware' => 'setlocale'], function() {
 
-        
     Route::get('/', 'HomeController@index');
 
-    Route::get('/home', 'HomeController@index')->name('home');
-    
-    Route::get('/blog/{post?}', 'HomeController@blog')->name('blog');
+    Route::get('home', 'HomeController@index')->name('home');
 
-    Route::get('/ucp/settings', 'UserController@settings')->name('ucp/settings');
+    Route::get('blog/{post?}', 'HomeController@blog')->name('blog');
 
-    Route::get('/login', 'Auth\LoginController@login')->name('login');
+    Route::get('ucp/settings', 'UserController@settings')->name('ucp/settings');
+
+    Route::get('login', 'Auth\LoginController@login')->name('login');
 
     Route::get('register', 'Auth\RegisterController@register')->name('register');
 });
-
 
 /*
 |--------------------------------------------------------------------------
@@ -50,10 +47,8 @@ Route::group([
 |
 */
 
-
 Route::post('verify', 'Auth\LoginController@check_Login')->name('verify');
 Route::post('createacc', 'Auth\RegisterController@Create')->name('createacc');
-
 
 /*
 |--------------------------------------------------------------------------

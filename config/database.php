@@ -44,27 +44,43 @@ return [
         ],
 
         'website' => [
-            'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'forge'),
-            'username'  => env('DB_USERNAME', 'forge'),
-            'password'  => env('DB_PASSWORD', ''),
-            'charset'   => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix'    => '',
-            'strict'    => false,
+            'driver' => 'mysql',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
         ],
 
         'auth' => [
-            'driver'     => 'mysql',
-            'host'       => env('AUTH_HOST', 'localhost'),
-            'database'   => env('AUTH_DATABASE', 'forge'),
-            'username'   => env('AUTH_USERNAME', 'forge'),
-            'password'   => env('AUTH_PASSWORD', ''),
-            'charset'    => 'utf8',
-            'collation'  => 'utf8_unicode_ci',
-            'prefix'     => '',
-            'strict'     => false,
+            'driver' => 'mysql',
+            'url' => env('DATABASE_URL'),
+            'host' => env('AUTH_HOST', '127.0.0.1'),
+            'port' => env('AUTH_PORT', '3306'),
+            'database' => env('AUTH_DATABASE', 'forge'),
+            'username' => env('AUTH_USERNAME', 'forge'),
+            'password' => env('AUTH_PASSWORD', ''),
+            'unix_socket' => env('AUTH_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
         ],
 
         'pgsql' => [
@@ -123,10 +139,10 @@ return [
 
     'redis' => [
 
-        'client' => env('REDIS_CLIENT', 'predis'),
+        'client' => env('REDIS_CLIENT', 'phpredis'),
 
         'options' => [
-            'cluster' => env('REDIS_CLUSTER', 'predis'),
+            'cluster' => env('REDIS_CLUSTER', 'redis'),
             'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_database_'),
         ],
 
