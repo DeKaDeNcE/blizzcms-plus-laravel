@@ -18,7 +18,7 @@ class Authenticate extends Middleware
     {
         if (! $request->expectsJson()) 
         {
-            return Theme::route('login', ['locale' => $desiredLocale])
+            return Theme::route('login', ['locale' => $desiredLocale]);
         }
     }
 }

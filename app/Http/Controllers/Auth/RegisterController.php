@@ -81,9 +81,9 @@ class RegisterController extends Controller
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'), 
             ]);
-            return redirect('/login');
+            return redirect(app()->getLocale() . '/login');
         } else {
-            return redirect('/register');
+            return redirect(app()->getLocale() . '/register');
         }
     }
 
@@ -92,6 +92,6 @@ class RegisterController extends Controller
 
     public function Register()
     {        
-        return Theme::view('Register');
+        return Theme::view(app()->getLocale() . 'Register');
     }
 }

@@ -62,7 +62,7 @@ class LoginController extends Controller
         }
 
         if (Auth::check() ) {
-            return redirect('home');
+            return redirect(app()->getLocale() . '/home');
         }
     }
 
@@ -73,6 +73,6 @@ class LoginController extends Controller
 
     function logout(){
         Auth::logout();
-        return redirect('home');
+        return redirect(app()->getLocale() . '/home');
     }
 }
