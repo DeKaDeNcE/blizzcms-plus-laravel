@@ -1,7 +1,7 @@
 # _BlizzCMS_
 **_BlizzCMS_** is a Content Management System (CMS) based in Laravel whose purpose is facilitate the use of a website to administrators and players on a secure platform.
 
-![image](https://img.shields.io/badge/VERSION-0.1.0-success.svg?style=for-the-badge&logo=appveyor)
+![image](https://img.shields.io/badge/VERSION-0.0.1-success.svg?style=for-the-badge&logo=appveyor)
 ![image](https://img.shields.io/badge/STATUS-UNSTABLE-blue.svg?style=for-the-badge&logo=appveyor)
 
 | Requirements | Description |
